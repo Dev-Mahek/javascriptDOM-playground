@@ -4,7 +4,7 @@
 var a = [1, 2, 4, 6, 77, 78, 12, 1];
 var b = [
   ...a,
-]; /* ☝ spread operator will sprade or "copy" the value of the element [in this case we have an array as an element]*/
+]; /* 👆 spread operator will sprade or "copy" the value of the element [in this case we have an array as an element]*/
 
 // >Rest:
 var funf = (x, y, z, ...d) => {
@@ -20,4 +20,4 @@ funf(
   5,
   6,
   7
-); /* ☝ 7 arguments, So if we dont want rest of the arguments to be ignored then we will use "rest ...d" operator*/
+); /* 👆 7 arguments, So if we dont want rest of the arguments to be ignored then we will use "rest ...d" operator*/
