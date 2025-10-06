@@ -37,8 +37,9 @@ console.log("4. Wait for food");
 
 /*OUTPUT: 1. Take order
           3. Serve water
-          4. Wait for food
+          4. Wait for food      
           2. Cook food (after 2s)
+👆 Notice how steps 3 and 4 happen before the delayed step — that’s async behavior!
 */
 
 //If you are using this 👇 then you are writing "Async code":
