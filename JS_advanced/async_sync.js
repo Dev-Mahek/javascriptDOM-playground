@@ -26,6 +26,21 @@ console.log("Hii4");
 /*Synchronous = You order food and stand at the counter until it’s ready. You can’t do anything else until it’s served 😑.
 Asynchronous = You order food, get a buzzer, and find a table. You can do other things while waiting for your food. When it’s ready, the buzzer rings 😁 (callback runs).*/
 
+console.log("1. Take order");
+
+setTimeout(() => {
+  console.log("2. Cook food (after 2s)");
+}, 2000);
+
+console.log("3. Serve water");
+console.log("4. Wait for food");
+
+/*OUTPUT: 1. Take order
+          3. Serve water
+          4. Wait for food
+          2. Cook food (after 2s)
+*/
+
 //If you are using this 👇 then you are writing "Async code":
 /*>fetch
   >axios
