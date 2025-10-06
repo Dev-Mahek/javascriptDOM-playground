@@ -4,6 +4,9 @@
 // >Array Destructuring:
 const w = [1, 2, 3];
 const [p, q, r] = w; // p=1, q=2, r=3
+console.log(p);
+console.log(q);
+console.log(r);
 
 const s = [1, 2, 3];
 const [t, , u] = s; // t=1, skip, u=3
