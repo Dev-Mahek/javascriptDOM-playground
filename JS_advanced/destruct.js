@@ -47,4 +47,42 @@ const user = {
 const { name, age } = user;
 console.log(name, age); // Mahek 25
 
-// >
+// >Renaming Variables While Destructuring: (You can rename 👇 variables during destructuring.)
+
+const person = { firstName: "Mahek", city: "Guwahati" };
+
+const { firstName: userName, city: userCity } = person;
+
+console.log(userName, userCity); // Mahek Guwahati
+
+// >Destructuring Function Return Values: (Useful when working with APIs that return arrays.)
+
+let getCoordinates = () => {
+  return [25.123, 93.456];
+};
+
+const [lat, lon] = getCoordinates();
+console.log(lat, lon); // 25.123 93.456
+
+// >Nested Destructuring from API-like Object: (Extract deep values)
+
+const response = {
+  user: {
+    id: 101,
+    info: {
+      name: "Mahek",
+      profession: "Web-Dev",
+    },
+  },
+};
+
+const {
+  user: {
+    info: { name, profession },
+  },
+} = response;
+
+console.log(name);  //Mahek
+console.log(profession);  //Web-Dev  
+console.log(name, profession);  //Mahek Web-Dev  👈 Quickly access deeply nested API data.
+
