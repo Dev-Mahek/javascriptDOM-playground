@@ -1,9 +1,9 @@
 // 🎯 Async and Sync:-
 
-// >Sync:
+// >Sync: (Everything happens in a top-to-bottom order.)
 console.log("Hay");
 console.log("Hay2"); /*👈So this a sync code*/
-console.log("Hay3"); /*Line by line it will execute*/
+console.log("Hay3"); /*JavaScript waits for each line before moving to the next.*/
 
 // >Async:
 console.log("Hii");
