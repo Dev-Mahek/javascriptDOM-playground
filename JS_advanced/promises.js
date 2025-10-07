@@ -67,3 +67,60 @@ var pns3 = pns2.then(function (data) {
 pns3.then(function (data) {
   console.log(data); /* 👈 console loging the 3rd promise data or task*/
 });
+
+// >Promise with Timeout:
+
+const delay = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Waited 2 seconds ⏱️");
+  }, 2000);
+});
+
+delay.then((message) => console.log(message));
+
+// >Handling Promise Errors: (Always use .catch() to handle rejected promises.)
+
+var err = () => {
+  return new Promise((res, rej) => {
+    const success = false;
+
+    setTimeout(() => {
+      if (success) {
+        res("data fetched");
+      } else {
+        rej("failed to fetch");
+      }
+    }, 2000);
+  });
+};
+
+err()
+  .then((data) => {
+    console.log(data);
+  })
+
+  .catch((data) => {
+    console.log(data);
+  });
+
+// >Race Between Promises:
+
+const fast = new Promise((resolve) => setTimeout(() => resolve("Fast one 🚀"), 1000));
+const slow = new Promise((resolve) => setTimeout(() => resolve("Slow one 🐢"), 3000));
+
+Promise.race([fast, slow]).then((result) => console.log(result));  
+/*👆Promise.race() returns the first promise that finishes.*/
+
+//OUTPUT: Fast one 🚀
+
+// >Running Multiple Promises in Parallel: (Runs in parallel, 👇 not sequentially.)
+
+const p1 = new Promise((resolve) => setTimeout(() => resolve("Task 1 ✅"), 1000));
+const p2 = new Promise((resolve) => setTimeout(() => resolve("Task 2 ✅"), 2000));
+const p3 = new Promise((resolve) => setTimeout(() => resolve("Task 3 ✅"), 1500));
+
+Promise.all([p1, p2, p3]).then((results) => {   /*👈Use Promise.all() to wait for all promises to finish.*/
+  console.log("All done:", results);
+});
+
+//OUTPUT: All done: [ 'Task 1 ✅', 'Task 2 ✅', 'Task 3 ✅' ]
