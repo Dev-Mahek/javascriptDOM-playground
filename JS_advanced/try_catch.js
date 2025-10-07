@@ -48,4 +48,26 @@ try {
           ❗Error caught: ReferenceError - undefinedVariable is not defined
 */
 
+// >Try/Catch with Async/Await:
 
+function getData() {
+  return new Promise((_, reject) => {
+    setTimeout(() => reject("Network error 🌐"), 2000);
+  });
+}
+
+async function fetchData() {
+  try {
+    console.log("Fetching data...");
+    const result = await getData();
+    console.log(result);
+  } catch (error) {
+    console.error("Caught async error:", error);
+  }
+}
+
+fetchData();
+
+/*OUTPUT: Fetching data...
+          ❗Caught async error: Network error 🌐
+*/
