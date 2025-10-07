@@ -12,9 +12,40 @@ try {
   ); /*this will handel the error and execute the remaining code*/
 } catch (err) {
   /*in "catch" we will console log that error so that the above lines of code can be executed without any issue*/
+  //[Catching unexpected runtime errors prevents your program from crashing.]
   console.log(err);
 }
 
 console.log(
   "daughter=Prokrity"
 ); /*👆 this will also not execute until the above line execute*/
+
+//--------------------------------------------------------------
+try {
+  console.log("hello world");
+  console.log(serfgsdfgsdrfgsg);
+} catch (err) {
+  console.error("error:", err.name, "-", err.message);
+  console.log("hii");
+}
+
+/*OUTPUT:hello world
+        ❗error: ReferenceError - serfgsdfgsdrfgsg is not defined
+        hii
+*/
+
+try {
+  let num = 10;
+  let result = num / 2;
+  console.log(result);
+
+  console.log(undefinedVariable); // ReferenceError
+} catch (err) {
+  console.error("Error caught:", err.name, "-", err.message);
+}
+
+/*OUTPUT: 5
+          ❗Error caught: ReferenceError - undefinedVariable is not defined
+*/
+
+
