@@ -27,3 +27,15 @@ for (let i = str.length - 1; i >= 0; i--) {
 
 console.log("Original:", str);
 console.log("Reversed:", reversed);
+
+// -------------🎲 2. Random emoji rain generator----------------
+
+const emojis = ["💀", "🔥", "👻", "💫", "⚡"];
+let rain = "";
+
+for (let i = 0; i < 10; i++) {
+  const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+  rain += randomEmoji + " ";
+}
+
+console.log(rain);
