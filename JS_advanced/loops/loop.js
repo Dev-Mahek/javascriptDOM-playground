@@ -15,3 +15,5 @@ for (var key in b) {
   //   console.log(b[key]);
   //   console.log(key, b[key]);
 }
+
+// -----------Reverse a string manually--------------
