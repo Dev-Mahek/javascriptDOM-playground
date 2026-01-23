@@ -1,4 +1,4 @@
-// 🎯 Arrow Functions:- >Basic Fat Arrow Fun  >Fat Arrow Fun with one parameter  >Fat Arrow Fun with implicit return
+// 🎯 -Arrow Functions:- >Basic Fat Arrow Fun  >Fat Arrow Fun with one parameter  >Fat Arrow Fun with implicit return
 
 // >Basic Fat Arrow Fun:-
 var fun = () => {};
