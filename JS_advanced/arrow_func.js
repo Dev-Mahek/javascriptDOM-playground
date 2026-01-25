@@ -1,6 +1,6 @@
 // 🎯 -Arrow Functions:- >Basic Fat Arrow Fun  >Fat Arrow Fun with one parameter  >Fat Arrow Fun with implicit return
 
-// >Basic Fat Arrow Fun:---
+// >Basic Fat Arrow Fun:-
 var fun = () => {};
 
 // >Fat Arrow Fun with one parameter:-(if we want then we can remove those fat brackets() in case of one value parameter)
