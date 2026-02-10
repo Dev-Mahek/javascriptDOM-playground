@@ -7,7 +7,7 @@ Welcome to my **JavaScript Playground** 🎉
 This repository is a personal space where I experiment, practice, and learn **JavaScript**.  
 Over time, it will grow with **snippets, mini-projects, and notes** that reflect my journey as a web developer.  
 
----
+----
 
 ## 🚀 Purpose
 
